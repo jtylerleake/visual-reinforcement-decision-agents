@@ -62,7 +62,6 @@ def make_single_stock_env(ticker: str,  gaf_data: pd.DataFrame,
                 return prices, gaf_sequences
 
         # create and return monitored environment
-        x = SingleStockEnv()
         env = Monitor(SingleStockEnv())
         return env
         
